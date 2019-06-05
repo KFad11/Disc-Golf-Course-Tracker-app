@@ -1,0 +1,2 @@
+class DiscGolfersController < ApplicationController
+end
