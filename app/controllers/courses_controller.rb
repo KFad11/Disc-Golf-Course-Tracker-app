@@ -8,6 +8,10 @@ class CoursesController < ApplicationController
     redirect_to @course
   end
 
+  def show
+    @course = Course.find(params[:id])
+  end
+
 private
   def course_params
     params.require(:course).permit(:name, :location)
