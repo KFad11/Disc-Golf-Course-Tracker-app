@@ -1,5 +1,5 @@
-class Basket < Application
-  belongs_to :course
+# frozen_string_literal: true
 
-  #has a par:integer / terrain:string attributes
+class Basket < ApplicationRecord
+  belongs_to :course
 end
