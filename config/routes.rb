@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  devise_for :disc_golfers, controllers: {
-        sessions: 'disc_golfers/sessions'
-      }
+  # devise_for :disc_golfers, controllers: {
+  #       sessions: 'disc_golfers/sessions'
+  #     }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

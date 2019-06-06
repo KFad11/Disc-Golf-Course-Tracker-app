@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 class Visit < ApplicationRecord
-  belongs_to :disc_golfer
-  belongs_to :course
+  belongs_to :disc_golfer, required: nil
+  belongs_to :course, required: nil
 end

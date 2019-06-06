@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class Basket < ApplicationRecord
-  belongs_to :course
+  belongs_to :course, required: nil
 end
