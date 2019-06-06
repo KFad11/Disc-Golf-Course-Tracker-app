@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_06_121332) do
+ActiveRecord::Schema.define(version: 2019_06_06_145006) do
 
   create_table "baskets", force: :cascade do |t|
     t.integer "basket_number"
     t.integer "par"
+    t.integer "course_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_06_06_121332) do
   create_table "visits", force: :cascade do |t|
     t.integer "disc_golfer_id"
     t.integer "course_id"
+    t.date "day_visited"
     t.index ["course_id"], name: "index_visits_on_course_id"
     t.index ["disc_golfer_id"], name: "index_visits_on_disc_golfer_id"
   end
