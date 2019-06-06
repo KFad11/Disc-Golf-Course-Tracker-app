@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :courses do
-    resources :baskets
+    resources :baskets, only: [:create, :destroy]
+    resources :visits, only: [:new, :create, :index]
   end
 
   root 'welcome#index'
