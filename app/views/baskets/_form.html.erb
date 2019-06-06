@@ -4,8 +4,13 @@
     <%= form.text_field :basket_number %>
   </p>
   <p>
-    <%= form.label :par %><br>
-    <%= form.text_area :par %>
+  <%= label_tag(:par, "Enter the Par for the hole") %><br/>
+  <%= label_tag(:par_3, "3") %>
+  <%= radio_button_tag(:par, "3") %><br/>
+  <%= label_tag(:par_3, "4") %>
+  <%= radio_button_tag(:par, "4") %><br/>
+  <%= label_tag(:par_3, "5") %>
+  <%= radio_button_tag(:par, "5") %><br/>
   </p>
   <p>
     <%= form.submit %>
