@@ -1,0 +1,14 @@
+<h2>All Disc Golf Courses</h2>
+
+<ul>
+  <% @courses.each do |course| %>
+    <li>
+      <%= link_to course.name, course_path(course) %>
+      <br>
+      Location: <%= course.location %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<h3><%= link_to 'Log a new course!', new_course_path %></h3>

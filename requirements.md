@@ -2,15 +2,15 @@ Add notes below each checkbox with how your application has met the requirement
 
 Requirements:
 
-[ ] Uses Ruby on Rails
+[X] Uses Ruby on Rails
 
-[ ] Includes at least one has_many relationship (e.g. User has_many Recipes)
+[X] Includes at least one has_many relationship (e.g. User has_many Recipes)
 
-[ ] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
+[X] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
 
-[ ] Includes at least one has_many through relationship (e.g. Recipe has_many Items through Ingredients)
+[X] Includes at least one has_many through relationship (e.g. Recipe has_many Items through Ingredients)
 
-[ ] The "through" part of the has_many through includes at least one user submittable attribute (e.g. ingredient#quantity)
+[X] The "through" part of the has_many through includes at least one user submittable attribute (e.g. ingredient#quantity)
 
 [ ] Includes reasonable validations for simple model objects
 

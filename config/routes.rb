@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :disc_golfers
   get 'welcome/index'
 
   resources :courses

@@ -1,15 +1,23 @@
 class CoursesController < ApplicationController
+  before_action :authenticate_disc_golfer!
   def new; end
 
   def create
     @course = Course.new(course_params)
 
-    @course.save
-    redirect_to @course
+    if @course.save
+      redirect_to @course
+    else
+      render 'new'
+    end
   end
 
   def show
     @course = Course.find(params[:id])
+  end
+
+  def index
+    @courses = Course.all
   end
 
 private
