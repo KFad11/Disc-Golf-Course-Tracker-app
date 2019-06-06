@@ -1,0 +1,13 @@
+<%= form_with(model: [ @course, @course.baskets.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :basket_number %><br>
+    <%= form.text_field :basket_number %>
+  </p>
+  <p>
+    <%= form.label :par %><br>
+    <%= form.text_area :par %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
