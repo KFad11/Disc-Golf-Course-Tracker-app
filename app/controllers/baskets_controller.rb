@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class BasketsController < ApplicationController
+
   def create
     @course = Course.find(params[:course_id])
     @basket = @course.baskets.create(basket_params)

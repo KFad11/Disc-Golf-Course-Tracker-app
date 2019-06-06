@@ -17,7 +17,7 @@ Requirements:
   - Visits has a day_visited attribute to log when you visited the course.
 
 [X] Includes reasonable validations for simple model objects
-  [ ] - baskets numbers be a drop down and range between 3-5
+  [X] - baskets numbers be a drop down and range between 3-5
   [ ] - protecting against basket number uniqueness
 
 [ ] Includes a class level ActiveRecord scope method
