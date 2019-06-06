@@ -15,6 +15,7 @@ class BasketsController < ApplicationController
   end
 
 private
+
   def basket_params
     params.require(:basket).permit(:basket_number, :par)
   end

@@ -30,7 +30,7 @@ class CoursesController < ApplicationController
     if @course.update(course_params)
       redirect_to @course
     else
-      render 'edit'
+      render "edit"
     end
   end
 
