@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   devise_for :disc_golfers
   get 'welcome/index'
 
+  resources :disc_golfers
   resources :courses do
     resources :baskets, only: [:create, :destroy]
-    resources :visits, only: [:new, :create, :index]
+    resources :visits
   end
 
   root 'welcome#index'

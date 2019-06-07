@@ -1,0 +1,9 @@
+<%= form_with scope: :visit, url: new_course_visit_path, local: true do |form| %>
+  <p>
+    <%= form.label :day_visited %><br>
+    <%= form.date_field :day_visited %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

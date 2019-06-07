@@ -1,0 +1,17 @@
+<h2>Visits For <%= current_disc_golfer.name %></h2>
+<ul>
+  <% @visits.each do |visit| %>
+    <li>
+      <strong>Day Visited:</strong>
+      <%= visit.day_visited %><br/>
+      <%= link_to visit.course.name, course_path(visit.course) %>
+      <br>
+      Location: <%= visit.course.location %>
+    </li>
+    <%= link_to 'Remove Visit', course_visits_path(@course),
+               method: :delete,
+               data: { confirm: 'Are you sure?!' } %>
+  <% end %>
+  <br>
+  <br>
+</ul>
