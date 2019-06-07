@@ -10,8 +10,7 @@ class DiscGolfersController < ApplicationController
     if @disc_golfer.save
       redirect_to @course
     else
-      render 'new'
+      render "new"
     end
   end
-
 end

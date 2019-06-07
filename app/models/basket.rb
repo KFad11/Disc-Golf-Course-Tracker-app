@@ -8,8 +8,7 @@ class Basket < ApplicationRecord
   validate :non_zero_and_negative
 
   def non_zero_and_negative
-    if basket_number.nil? || basket_number <= 0
-      errors.add(:basket_number, "Field can't be zero or negative")
-    end
+    errors.add(:basket_number, "Field can't be zero or negative")\
+ if basket_number.nil? || basket_number <= 0
   end
 end
