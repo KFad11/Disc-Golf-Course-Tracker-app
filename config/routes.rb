@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :disc_golfers
   resources :courses do
-    resources :baskets, only: [:create, :destroy]
+    resources :baskets
     resources :visits
   end
 

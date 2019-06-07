@@ -1,4 +1,4 @@
-<%= form_with scope: :visit, url: new_course_visit_path, local: true do |form| %>
+<%= form_with scope: :visit, url: course_visits_path, local: true do |form| %>
   <p>
     <%= form.label :day_visited %><br>
     <%= form.date_field :day_visited %>
