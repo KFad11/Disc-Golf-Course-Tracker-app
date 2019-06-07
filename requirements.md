@@ -25,7 +25,7 @@ Requirements:
 
 [X] Includes login (e.g. Devise)
 
-[ ] Includes logout (e.g. Devise)
+[X] Includes logout (e.g. Devise)
 
 [ ] Includes nested resource show or index (e.g. users/2/recipes)
   - Visits index page, showing each course thats been visited
