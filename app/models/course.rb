@@ -7,4 +7,5 @@ class Course < ApplicationRecord
   has_many :visits
   has_many :disc_golfers, through: :visits
   accepts_nested_attributes_for :baskets
+  validates_associated :baskets
 end
