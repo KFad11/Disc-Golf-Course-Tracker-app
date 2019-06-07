@@ -1,16 +1,26 @@
 <%= form_with(model: [ @course, @course.baskets.build ], local: true) do |form| %>
+
+<% if @course.errors.any? %>
+  <div id="basket numbers must be unqiue">
+    <h2>
+      <%= pluralize(@course.errors.count, "error") %> prohibited
+      this basket from being saved:
+    </h2>
+    <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
   <p>
     <%= form.label :basket_number %><br>
     <%= form.text_field :basket_number %>
   </p>
   <p>
-  <%= label_tag(:par, "Enter the Par for the hole") %><br/>
-  <%= label_tag(:par_3, "3") %>
-  <%= radio_button_tag(:par, "3") %><br/>
-  <%= label_tag(:par_3, "4") %>
-  <%= radio_button_tag(:par, "4") %><br/>
-  <%= label_tag(:par_3, "5") %>
-  <%= radio_button_tag(:par, "5") %><br/>
+    <%= form.label :par %><br>
+    <%= form.text_field :par %>
   </p>
   <p>
     <%= form.submit %>
