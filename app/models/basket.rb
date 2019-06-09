@@ -7,8 +7,16 @@ class Basket < ApplicationRecord
   # validates :basket_number, uniqueness: true
   validate :non_zero_and_negative
 
+  scope :by_number, -> { order(:basket_number) }
+  # def self.by_number
+  #   order(:basket_number)
+  # end
+
+
+private
+
   def non_zero_and_negative
-    errors.add(:basket_number, "Field can't be zero or negative")\
- if basket_number.nil? || basket_number <= 0
+    errors.add(:basket_number, "Field can't be zero or negative") \
+    if basket_number.nil? || basket_number <= 0
   end
 end

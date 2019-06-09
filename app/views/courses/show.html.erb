@@ -14,7 +14,7 @@
 
 <h2>Baskets</h2>
 
-<% @course.baskets.order(:basket_number).each do |basket| %>
+<% @course.baskets.by_number.each do |basket| %>
   <p>
     <strong>Basket Number:</strong>
     <%= basket.basket_number %>
