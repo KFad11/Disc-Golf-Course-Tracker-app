@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_06_145006) do
+ActiveRecord::Schema.define(version: 2019_06_07_234901) do
 
   create_table "baskets", force: :cascade do |t|
     t.integer "basket_number"
