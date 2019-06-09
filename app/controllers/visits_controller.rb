@@ -6,7 +6,6 @@ class VisitsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @course = Course.find(params[:course_id])
     @visit = @course.visits.create(visit_params)
     @visit.save
@@ -14,16 +13,15 @@ class VisitsController < ApplicationController
   end
 
   def index
-    # binding.pry
     @visits = Visit.all
+    @course = Course.find(params[:course_id])
   end
 
   def destroy
-    # binding.pry
     @course = Course.find(params[:course_id])
     @visit = @course.visits.find(params[:id])
     @visit.destroy
-    redirect_to course_visit_path(@course, visit)
+    redirect_to course_visits_path(@course)
   end
 
   def show
