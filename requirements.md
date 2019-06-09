@@ -17,9 +17,10 @@ Requirements:
   - Visits has a day_visited attribute to log when you visited the course.
 
 [X] Includes reasonable validations for simple model objects
-  [ ] - protecting against basket number uniqueness
+  [ ] - protecting against basket number uniqueness on each individual course.
 
-[ ] Includes a class level ActiveRecord scope method
+[X] Includes a class level ActiveRecord scope method
+  on the basket display to order the baskets by number.
 
 [X] Includes signup (e.g. Devise)
 
@@ -27,7 +28,7 @@ Requirements:
 
 [X] Includes logout (e.g. Devise)
 
-[ ] Includes nested resource show or index (e.g. users/2/recipes)
+[X] Includes nested resource show or index (e.g. users/2/recipes)
   - Visits index page, showing each course thats been visited
 
 [X] Includes nested resource "new" form (recipes/1/ingredients/new)
@@ -37,7 +38,7 @@ Requirements:
 
 [ ] Includes Unit tests for at least 2 of your models
 
-[ ] Conforms to Nitro Ruby linting rules (running rubocop returns 0 offenses)
+[X] Conforms to Nitro Ruby linting rules (running rubocop returns 0 offenses)
 
 [ ] Includes a README.md with an application description and installation guide
 

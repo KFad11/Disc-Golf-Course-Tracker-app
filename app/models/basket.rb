@@ -4,10 +4,11 @@ class Basket < ApplicationRecord
   belongs_to :course, required: nil
   validates :basket_number, presence: true
   validates :par, presence: true
-  # validates :basket_number, uniqueness: true
   validate :non_zero_and_negative
-
+  validates :basket_number, uniqueness: { scope: :course_id,
+    message: "A basket number must be unique." }
   scope :by_number, -> { order(:basket_number) }
+  validates :day_visited, presence: true
   # def self.by_number
   #   order(:basket_number)
   # end

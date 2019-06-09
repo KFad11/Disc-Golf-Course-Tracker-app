@@ -7,10 +7,12 @@
       <%= visit.course.name %>
       <br>
       Location: <%= visit.course.location %>
-    </li>
-    <%= link_to 'Destroy Visit', course_visit_path(@course, @visits),
+
+      <%= link_to 'Destroy Visit', course_visit_path(@course, visit),
                method: :delete,
                data: { confirm: 'Are you sure?!' } %>
   <% end %>
+    </li>
 </ul>
+
 
