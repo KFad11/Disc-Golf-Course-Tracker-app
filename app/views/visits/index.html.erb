@@ -6,11 +6,13 @@
       <%= visit.day_visited %><br/>
       <%= visit.course.name %>
       <br>
-      Location: <%= visit.course.location %>
+      Location: <%= visit.course.location %></br></br>
 
       <%= link_to 'Destroy Visit', course_visit_path(@course, visit),
                method: :delete,
-               data: { confirm: 'Are you sure?!' } %>
+               data: { confirm: 'Are you sure?!' } %></br></br>
+
+      <%= link_to 'Back', courses_path %></br></br>
   <% end %>
     </li>
 </ul>
