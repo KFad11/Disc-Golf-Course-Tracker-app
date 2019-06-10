@@ -4,7 +4,16 @@ class BasketsController < ApplicationController
   def create
     @course = Course.find(params[:course_id])
     @basket = @course.baskets.create(basket_params)
-    redirect_to course_path(@course)
+
+    if @basket.save
+      redirect_to course_path(@course)
+    else
+      render 'courses/show'
+    end
+  end
+
+  def index
+    redirect_to course_path(params[:course_id])
   end
 
   def destroy
