@@ -8,7 +8,6 @@ class Basket < ApplicationRecord
   validates :basket_number, uniqueness: { scope: :course_id,
     message: "A basket number must be unique." }
   scope :by_number, -> { order(:basket_number) }
-  validates :day_visited, presence: true
   # def self.by_number
   #   order(:basket_number)
   # end

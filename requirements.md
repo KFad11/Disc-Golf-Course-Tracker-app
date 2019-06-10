@@ -17,7 +17,8 @@ Requirements:
   - Visits has a day_visited attribute to log when you visited the course.
 
 [X] Includes reasonable validations for simple model objects
-  [ ] - protecting against basket number uniqueness on each individual course.
+  [X] - protecting against basket number uniqueness on each individual course.
+  [ ] - How to display rails errors in controller actions.
 
 [X] Includes a class level ActiveRecord scope method
   on the basket display to order the baskets by number.
@@ -29,9 +30,10 @@ Requirements:
 [X] Includes logout (e.g. Devise)
 
 [X] Includes nested resource show or index (e.g. users/2/recipes)
-  - Visits index page, showing each course thats been visited
+  - Visits index page, showing each of you visits, when and which course.
 
 [X] Includes nested resource "new" form (recipes/1/ingredients/new)
+  - Create a new visit to a course.
 
 [X] Includes form display of validation errors
   - Devises' login validations, also a course throws errors if you leave out the name and/or location. The new basket fields require uniqueness of basket #.
