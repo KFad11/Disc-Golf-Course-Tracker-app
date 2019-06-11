@@ -38,12 +38,12 @@ Requirements:
 [X] Includes form display of validation errors
   - Devises' login validations, also a course throws errors if you leave out the name and/or location. The new basket fields require uniqueness of basket #.
 
-[ ] Includes Unit tests for at least 2 of your models
+[X] Includes Unit tests for at least 2 of your models
 
 [X] Conforms to Nitro Ruby linting rules (running rubocop returns 0 offenses)
 
 [ ] Includes a README.md with an application description and installation guide
-
+Your app should include a README.md with a description of the project and an installation guide (e.g. fork and clone repo, migrate db, bundle install, etc).
 
 Confirm:
 
