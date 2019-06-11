@@ -3,7 +3,10 @@
 class Visit < ApplicationRecord
   belongs_to :disc_golfer, required: nil
   belongs_to :course, required: nil
+
   validate :visit_date_cannot_be_in_the_future
+
+  scope :chrono, -> { order(:day_visited) }
 end
 
 private
