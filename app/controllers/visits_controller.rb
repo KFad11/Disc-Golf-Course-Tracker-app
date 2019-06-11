@@ -3,13 +3,18 @@
 class VisitsController < ApplicationController
   def new
     @visit = Visit.new
+    @course = Course.find(params[:course_id])
   end
 
   def create
     @course = Course.find(params[:course_id])
-    @visit = @course.visits.create(visit_params)
-    @visit.save
-    redirect_to course_visits_path(@course)
+    @visit = @course.visits.new(visit_params)
+    @visit.disc_golfer = current_disc_golfer
+    if @visit.save
+      redirect_to course_visits_path(@course)
+    else
+      render "new"
+    end
   end
 
   def index
