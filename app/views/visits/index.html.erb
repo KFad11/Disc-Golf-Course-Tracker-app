@@ -11,10 +11,11 @@
       <%= link_to 'Destroy Visit', course_visit_path(@course, visit),
                method: :delete,
                data: { confirm: 'Are you sure?!' } %></br></br>
-
-      <%= link_to 'Back', courses_path %></br></br>
   <% end %>
     </li>
 </ul>
+<h3> <%= link_to 'Back to log a new visit', new_course_visit_path(@course) %></h3>
+
+<h3><%= link_to 'Back to the Index', courses_path %></h3>
 
 
