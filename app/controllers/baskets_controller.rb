@@ -8,7 +8,7 @@ class BasketsController < ApplicationController
     if @basket.save
       redirect_to course_path(@course)
     else
-      render 'courses/show'
+      render "courses/show"
     end
   end
 
