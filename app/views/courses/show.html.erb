@@ -14,7 +14,8 @@
  <%= @course.location %>
 </h3><br/>
 
-<%= link_to 'Log a visit to the course', new_course_visit_path(@course) %><br/><br/>
+<%= link_to 'Log a visit to the course', new_course_visit_path(@course) %> -- OR! --
+<%= link_to 'See all visits to the course', course_visits_path(@course) %><br/><br/>
 
 <h2>Baskets</h2>
 
