@@ -1,6 +1,6 @@
 <h2>Visits For <%= current_disc_golfer.name %></h2>
 <ul>
-  <% @visits.each do |visit| %>
+  <% @visits.chrono.each do |visit| %>
     <li>
       <strong>Day Visited:</strong>
       <%= visit.day_visited %><br/>

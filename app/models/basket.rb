@@ -2,11 +2,13 @@
 
 class Basket < ApplicationRecord
   belongs_to :course, required: nil
+
   validate :non_zero_and_negative
   validate :par_check
   validates :basket_number,
             uniqueness: { scope: :course_id,
                           message: "A basket number must be unique." }
+
   scope :by_number, -> { order(:basket_number) }
 # def self.by_number
 #  order(:basket_number)

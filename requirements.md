@@ -14,11 +14,11 @@ Requirements:
   - Disc_Golfer has_many Courses through Visits
 
 [X] The "through" part of the has_many through includes at least one user submittable attribute (e.g. ingredient#quantity)
-  - Visits has a day_visited attribute to log when you visited the course.
+  - Visits has a day_visited attribute to log when you visited the course. On the new visit page/schema.
 
 [X] Includes reasonable validations for simple model objects
   [X] - protecting against basket number uniqueness on each individual course.
-  [ ] - How to display rails errors in controller actions.
+  [X] - How to display rails errors in controller actions.
 
 [X] Includes a class level ActiveRecord scope method
   on the basket display to order the baskets by number.

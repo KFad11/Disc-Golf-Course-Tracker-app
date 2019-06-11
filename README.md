@@ -46,7 +46,7 @@ bundle
 rails db:create db:migrate db:seed
 ```
 
-## Serve
+## To start a local server
 
 ```shell
 rails s
