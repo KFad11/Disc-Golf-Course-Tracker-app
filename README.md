@@ -1,24 +1,53 @@
-# README
+# Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Disc Golf Course Tracker App!
 
-Things you may want to cover:
+## Overview
+  The app allows you to keep track of all the disc golf courses you've visited, and what date you visited them on.
 
-* Ruby version
+  You'll be able to sign in or sign up. Log in new courses you've played at. Create an initial layout of the course with how many baskets there was and what  par they were. Then log a visit from each course page detailing when the visit was.
 
-* System dependencies
+  Let's go over how to get started..
 
-* Configuration
+## Install
 
-* Database creation
+### Clone the repository
 
-* Database initialization
+```shell
+git clone git@github.com:KFad11/Disc-Golf-Course-Tracker-app.git
+cd Disc-Golf-Course-Tracker-app
+```
 
-* How to run the test suite
+### Check your Ruby version
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+ruby -v
+```
 
-* Deployment instructions
+The ouput should start with something like `ruby 2.5.1`
 
-* ...
+If not, install the right ruby version using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
+
+```shell
+rbenv install 2.5.1
+```
+
+### Install dependencies
+
+Using [Bundler](https://github.com/bundler/bundler)
+
+```shell
+bundle
+```
+
+### Initialize the database
+
+```shell
+rails db:create db:migrate db:seed
+```
+
+## Serve
+
+```shell
+rails s
+```

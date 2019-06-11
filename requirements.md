@@ -42,8 +42,7 @@ Requirements:
 
 [X] Conforms to Nitro Ruby linting rules (running rubocop returns 0 offenses)
 
-[ ] Includes a README.md with an application description and installation guide
-Your app should include a README.md with a description of the project and an installation guide (e.g. fork and clone repo, migrate db, bundle install, etc).
+[X] Includes a README.md with an application description and installation guide.
 
 Confirm:
 
