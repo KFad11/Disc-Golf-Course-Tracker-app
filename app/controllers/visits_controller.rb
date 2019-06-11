@@ -18,8 +18,8 @@ class VisitsController < ApplicationController
   end
 
   def index
-    @visits = Visit.all
     @course = Course.find(params[:course_id])
+    @visits = @course.visits
   end
 
   def destroy
