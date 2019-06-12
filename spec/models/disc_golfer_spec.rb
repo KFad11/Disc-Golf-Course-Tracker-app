@@ -11,5 +11,10 @@ RSpec.describe DiscGolfer, type: :model do
       disc_golfer = build(:disc_golfer, password: nil)
       expect(disc_golfer).to_not be_valid
     end
+
+    it "without an email" do
+      disc_golfer = build(:disc_golfer, email: nil)
+      expect(disc_golfer).to_not be_valid
+    end
   end
 end
