@@ -1,18 +1,7 @@
 <%= form_with(model: [ @course, @course.baskets.build ], local: true) do |form| %>
 
-<% if @basket && @basket.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@basket.errors.count, "error") %> prohibited
-      this basket from being saved:
-    </h2>
-    <ul>
-      <% @basket.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+ <%= render partial: "shared/errors", locals: {object: @basket} %>
+
 
   <p>
     <%= form.label :basket_number %><br>

@@ -5,7 +5,7 @@ Disc Golf Course Tracker App!
 ## Overview
   The app allows you to keep track of all the disc golf courses you've visited, and what date you visited them on.
 
-  You'll be able to sign in or sign up. Log in new courses you've played at. Create an initial layout of the course with how many baskets there was and what  par they were. Then log a visit from each course page detailing when the visit was.
+  You'll be able to sign in or sign up. Log in new courses you've played at. Create an initial layout of the course with how many baskets there was and what par they were. Then log a visit from each course page detailing when the visit was.
 
   Let's go over how to get started..
 

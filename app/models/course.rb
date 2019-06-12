@@ -5,12 +5,9 @@ class Course < ApplicationRecord
   has_many :visits
   has_many :disc_golfers, through: :visits
 
-  validates_presence_of :name
-  validates_presence_of :location
+  validates :name, :location, presence: true
 
-  validates_associated :baskets
-  validates_associated :visits
+  validates_associated :baskets, :visits
 
-  accepts_nested_attributes_for :visits
-  accepts_nested_attributes_for :baskets
+  accepts_nested_attributes_for :visits, :baskets
 end

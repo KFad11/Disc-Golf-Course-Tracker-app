@@ -10,9 +10,6 @@ class Basket < ApplicationRecord
                           message: "A basket number must be unique." }
 
   scope :by_number, -> { order(:basket_number) }
-# def self.by_number
-#  order(:basket_number)
-# end
 
 private
 

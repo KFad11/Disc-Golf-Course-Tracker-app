@@ -1,19 +1,7 @@
 <h1>New Course</h1>
 <%= form_with scope: :course, url: courses_path, local: true do |form| %>
 
-<% if @course.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@course.errors.count, "error") %> prohibited
-      this course from being saved:
-    </h2>
-    <ul>
-      <% @course.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+ <%= render partial: "shared/errors", locals: {object: @course} %>
 
   <p>
     <%= form.label :name %><br>

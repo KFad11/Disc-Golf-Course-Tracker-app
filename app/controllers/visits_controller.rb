@@ -23,10 +23,10 @@ class VisitsController < ApplicationController
   end
 
   def destroy
-    @course = Course.find(params[:course_id])
-    @visit = @course.visits.find(params[:id])
-    @visit.destroy
-    redirect_to course_visits_path(@course)
+    course = Course.find(params[:course_id])
+    visit = course.visits.find(params[:id])
+    visit.destroy
+    redirect_to course_visits_path(course)
   end
 
   def show
