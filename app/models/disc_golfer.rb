@@ -8,4 +8,6 @@ class DiscGolfer < ApplicationRecord
 
   has_many :visits
   has_many :courses, through: :visits
+
+  validates_presence_of :name
 end

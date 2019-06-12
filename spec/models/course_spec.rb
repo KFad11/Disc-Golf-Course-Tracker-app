@@ -14,9 +14,9 @@ RSpec.describe Course, type: :model do
   end
 
   it "has many visits" do
-    course = build(:course)
-    # disc_golfer = build(:disc_golfer)
-    visit = build(:visit)
+    course = create(:course)
+    visit = create(:visit, course: course)
+    course.reload
     expect(course.visits.first).to eq(visit)
   end
 
