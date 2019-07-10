@@ -40,6 +40,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 
 gem "devise"
 gem "rack-flash3"
+gem "jquery-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code \

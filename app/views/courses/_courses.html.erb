@@ -1,0 +1,10 @@
+<ol>
+  <% @courses.each do |course| %>
+    <li>
+      <%= link_to course.name, course_path(course) %>
+      <br>
+      Location: <%= course.location %>
+    </li>
+    <br>
+  <% end %>
+</ol>

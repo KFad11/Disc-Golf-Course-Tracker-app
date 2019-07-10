@@ -8,11 +8,15 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
-
-    if @course.save
-      redirect_to @course
-    else
-      render "new"
+    # binding.pry
+    respond_to do |format|
+      if @course.save
+        # format.html { redirect_to @course, notice: 'Course was successfully created.' }
+        format.js { render :nothing, status: :created, location: @course }
+      else
+        format.html { render :new }
+        format.js { render json: @course.errors, status: :unprocessable_entity }
+      end
     end
   end
 

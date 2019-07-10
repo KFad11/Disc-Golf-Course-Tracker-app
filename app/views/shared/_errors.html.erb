@@ -1,7 +1,7 @@
 <% if object && object.errors.any? %>
   <div id="error_explanation">
     <h2>
-      There were <%= pluralize(object.errors.count, "error") %>
+      We have <%= pluralize(object.errors.count, "error") %>  here, what did you break?! Let's take a look...
     </h2>
     <ul>
       <% object.errors.full_messages.each do |msg| %>

@@ -1,18 +1,30 @@
 <h2>All Disc Golf Courses</h2>
 <h3>Click on a course to see the layout, edit the layout/course, or log a visit to the course</h3>
-<ul>
-  <% @courses.each do |course| %>
-    <li>
-      <%= link_to course.name, course_path(course) %>
-      <br>
-      Location: <%= course.location %>
-    </li>
-    <br>
-  <% end %>
-</ul>
 
-<h3><%= link_to 'Create a new course!', new_course_path %></h3>
+<div class="courses">
+  <%= render 'courses/courses' %>
+</div>
 
+<h3>Create a new course!</h3>
+<%= form_with scope: :course, url: courses_path, class: "course_form" do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :location %><br>
+    <%= form.text_field :location %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<br/>
+<br/>
 <h3><%= link_to 'Edit Account', edit_disc_golfer_registration_path %></h3>
 
 <h3><%= link_to "Sign Out", destroy_disc_golfer_session_path, method: :delete %></h3>
+
+<!-- COURSE INDEX PAGE DISPLAYS ABILITY TO ADD A NEW COURSE, UPON CREATION WE INTERCEPT THE FORM WITH AJAX AND DISPLAY NEW COURSE ON THE INDEX PAGE DIRECTLY. Req 4 -->
