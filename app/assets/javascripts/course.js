@@ -1,19 +1,20 @@
 'use strict'
 
 class Course {
-  constructor(name, location) {
+  constructor(name, location, link) {
     this.name = name
     this.location = location
+    this.link = link
   }
 
   courseEl() {
     return `
-      <ol>
-        <li>
-          <p>${this.name}</p>
-          <p>${this.location}</p>
-        </li>
-      </ol>
+      <li>
+        Name: <a href="${this.link}">${this.name}</a>
+        <br>
+        Location: ${this.location}
+      </li>
+      <br>
     `
   }
 }
