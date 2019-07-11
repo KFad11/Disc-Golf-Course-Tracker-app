@@ -1,16 +1,15 @@
 $(function(){
-  $(".course_form").on("submit", function(e){
-    console.log(e)
-    e.preventDefault();
+  $(".new_course").on("submit", (event) => {
+    event.preventDefault();
     $.ajax({
-      type: ($("input[name='_method']").val() || this.method),
+      type: "POST",
       url: this.action,
-      data: $(this).serialize(), // either JSON or querystring serializing
-      success: function(response){
-        console.log(response)
-        var $ol = $("div.courses ol")
-        $ol.append(response);
-      }
-    });
+      data: $(this).serialize(),
+      dataType: "JSON"
+    }).done(function(response) {
+      console.log(response)
+     var $ol = $("div.courses ol")
+      $ol.append(response)
+    })
   })
 })

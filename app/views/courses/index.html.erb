@@ -6,7 +6,7 @@
 </div>
 
 <h3>Create a new course!</h3>
-<%= form_with scope: :course, url: courses_path, class: "course_form" do |form| %>
+<%= form_for Course.new, url: courses_path do |form| %>
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>

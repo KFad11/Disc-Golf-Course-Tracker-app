@@ -11,11 +11,11 @@ class CoursesController < ApplicationController
     # binding.pry
     respond_to do |format|
       if @course.save
-        # format.html { redirect_to @course, notice: 'Course was successfully created.' }
-        format.js { render :nothing, status: :created, location: @course }
+        format.html { redirect_to @course, notice: 'Course was successfully created.' }
+        format.json { render json: @course.to_json, status: :created }
       else
         format.html { render :new }
-        format.js { render json: @course.errors, status: :unprocessable_entity }
+        format.json { render json: @course.errors, status: :unprocessable_entity }
       end
     end
   end
