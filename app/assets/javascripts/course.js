@@ -10,7 +10,7 @@ class Course {
   courseEl() {
     return `
       <li>
-        Name: <a href="${this.link}">${this.name}</a>
+        <a href="${this.link}">${this.name}</a>
         <br>
         Location: ${this.location}
       </li>
