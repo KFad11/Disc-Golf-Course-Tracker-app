@@ -1,6 +1,6 @@
 $(function(){
-  $(".new_course").on("submit", (event) => {
-    event.preventDefault();
+  $(".new_course").on("submit", function(e) {
+    e.preventDefault();
     $.ajax({
       type: "POST",
       url: this.action,
@@ -8,8 +8,10 @@ $(function(){
       dataType: "JSON"
     }).done(function(response) {
       console.log(response)
-     var $ol = $("div.courses ol")
-      $ol.append(response)
+      const newCourse = new Course(response.name, response.location)
+      const $courseList = $("div.courses ol")
+      $courseList.append(newCourse.courseEl())
     })
   })
 })
+

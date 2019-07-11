@@ -8,9 +8,12 @@ class Course {
 
   courseEl() {
     return `
-      <li>
-        <p>${this.course}</p>
-      </li>
+      <ol>
+        <li>
+          <p>${this.name}</p>
+          <p>${this.location}</p>
+        </li>
+      </ol>
     `
   }
 }
