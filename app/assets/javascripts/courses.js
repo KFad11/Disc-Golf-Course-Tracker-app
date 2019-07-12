@@ -1,11 +1,13 @@
 $(function(){
   $("a.load_visits").on("click", function(event){
-    $.ajax({
-      method: "GET",
-      url: this.href
-    }).done(function(response) {
-      $("div.visits").html(response)
-    });
+    $.get(this.href).done(function(json){
+      let $ol = $("div.visits ol")
+      $ol.html("")
+      json.forEach(function(visit){
+        console.log(visit)
+        $ol.append("<li>" + "Day Visited:  " + visit.day_visited + "</li>")
+      })
+    })
     event.preventDefault();
   })
 })
