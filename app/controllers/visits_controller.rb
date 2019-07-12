@@ -20,9 +20,10 @@ class VisitsController < ApplicationController
   def index
     @course = Course.find(params[:course_id])
     @visits = @course.visits
-
-    # render :layout => false
-    render json: @visits
+    respond_to do |format|
+      format.html { redirect_to course_path(@course) }
+      format.json { render json: @visits.to_json, status: :created }
+    end
   end
 
   def destroy
