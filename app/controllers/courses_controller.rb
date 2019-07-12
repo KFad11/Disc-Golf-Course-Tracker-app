@@ -6,11 +6,18 @@ class CoursesController < ApplicationController
     @course = Course.new
   end
 
-  def create
+  def create # rubocop:disable Metrics/MethodLength (Garett approved this)
     @course = Course.new(course_params)
     respond_to do |format|
       if @course.save
+        format.html { redirect_to @course, notice: "Course was created." }
         format.json { render json: @course.to_json, status: :created }
+      else
+        format.html { render :new }
+        format.json do
+          render json: @course.errors,
+                 status: :unprocessable_entity
+        end
       end
     end
   end
