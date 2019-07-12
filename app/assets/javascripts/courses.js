@@ -1,14 +1,15 @@
 $(function(){
   $("a.load_visits").on("click", function(event){
+    event.preventDefault();
     $.get(this.href).done(function(json){
+      console.log(json)
       let $ol = $("div.visits ol")
       $ol.html("")
       json.forEach(function(visit){
-        console.log(visit)
-        $ol.append("<li>" + "Day Visited:  " + visit.day_visited + "</li>")
+        const newVisit = new Visit(visit.day_visited)
+        $ol.append(newVisit.visitEl())
       })
     })
-    event.preventDefault();
   })
 })
 
@@ -21,7 +22,7 @@ $(function(){
       data: $(this).serialize(),
       dataType: "JSON"
     }).done(function(response) {
-      const link = this.url + "/" + response.id
+      const link = `${this.url}/${response.id}`
       const newCourse = new Course(response.name, response.location, link)
       const $courseList = $("div.courses ol")
       $courseList.append(newCourse.courseEl())
