@@ -20,6 +20,8 @@ class VisitsController < ApplicationController
   def index
     @course = Course.find(params[:course_id])
     @visits = @course.visits
+
+    render 'visits/index', :layout => false
   end
 
   def destroy
