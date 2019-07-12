@@ -39,8 +39,8 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 
 gem "devise"
-gem "rack-flash3"
 gem "jquery-rails"
+gem "rack-flash3"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code \
