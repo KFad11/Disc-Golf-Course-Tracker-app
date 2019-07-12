@@ -11,7 +11,7 @@ class VisitsController < ApplicationController
     @visit = @course.visits.new(visit_params)
     @visit.disc_golfer = current_disc_golfer
     if @visit.save
-      redirect_to course_visits_path(@course)
+      redirect_to course_path(@course)
     else
       render "new"
     end
@@ -21,7 +21,8 @@ class VisitsController < ApplicationController
     @course = Course.find(params[:course_id])
     @visits = @course.visits
 
-    render 'visits/index', :layout => false
+    # render :layout => false
+    render json: @visits
   end
 
   def destroy
