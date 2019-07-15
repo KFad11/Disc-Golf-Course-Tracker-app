@@ -35,7 +35,7 @@ $(function(){
     }).done(function(response) {
       const link = `${this.url}/${response.id}`
       const newCourse = new Course(response.name, response.location, link)
-      const $courseList = $("div.courses ol")
+      const $courseList = $("#disc_golf_courses") // needs to be more unique
       $courseList.append(newCourse.courseEl())
       // reactive button
       // How?
