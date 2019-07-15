@@ -24,7 +24,15 @@ class BasketsController < ApplicationController
   end
 
   def show
-    binding.pry
+    # binding.pry
+  end
+
+  def longest_par
+    @course = Course.find(params[:course_id])
+    @basket = @course.baskets.find(params[:id])
+    @basket.maximum(:par)
+
+    redirect_to courses_path
   end
 
 private
