@@ -1,12 +1,16 @@
 $(function(){
-  $(".long_shot").on("click", function(event){
+  $(".long_par").on("click", function(event){
     event.preventDefault();
-    $.ajax({
-      type: "GET",
-      url: ,
-      dataType:
-  }).done(function(response){
+    console.log(this.href)
+  //   $.ajax({
+  //     type: "GET",
+  //     url:
+  //     dataType: "JSON"
+  // }).done(function(response){
 
+    // build a controller action & route that will be the endpoint to the longest par on the course in baskets controller.
+
+    // Basket model logic to find the hole with the longest par.
   })
 
   $("a.load_visits").on("click", function(event){
