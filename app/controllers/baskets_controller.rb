@@ -23,16 +23,14 @@ class BasketsController < ApplicationController
     redirect_to course_path(@course)
   end
 
-  def show
-    # binding.pry
-  end
-
   def longest_par
     @course = Course.find(params[:course_id])
-    @basket = @course.baskets.find(params[:id])
-    @basket.maximum(:par)
+    @course.baskets.maximum(:par)
 
-    redirect_to courses_path
+    respond_to do |format|
+      format.html { redirect_to courses_path }
+      format.json { render json: @course.baskets.to_json, status: :created }
+    end
   end
 
 private
