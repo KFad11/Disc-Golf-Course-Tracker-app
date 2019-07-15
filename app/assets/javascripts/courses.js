@@ -1,4 +1,10 @@
 $(function(){
+  $(".long_shot").on("click", function(event){
+    event.preventDefault();
+  })
+})
+
+$(function(){
   $("a.load_visits").on("click", function(event){
     event.preventDefault();
     console.log(this.href)

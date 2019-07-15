@@ -5,7 +5,7 @@
       <br>
       Location: <%= course.location %>
       <br>
-      <%= link_to '<button type="button">Longest Hole on the course</button>'.html_safe, course_path(course) %>
+      <%= link_to '<button type="button">Longest Hole on the course</button>'.html_safe, course_path(course), :class => "long_shot" %>
     </li>
     <br>
   <% end %>
