@@ -1,26 +1,21 @@
 $(function(){
   $(".long_shot").on("click", function(event){
     event.preventDefault();
-    // Need to have the button look to the baskets form
+    $.ajax({
+      type: "GET",
+      url: ,
+      dataType:
+  }).done(function(response){
 
-    // iterate through all the available baskets
-
-    // Capture the basket with the highest par, or if there's multiple with the same, chose the first highest basket with the highest par.
-
-    // The click of the button would display that basket.
   })
-})
 
-$(function(){
   $("a.load_visits").on("click", function(event){
     event.preventDefault();
-    console.log(this.href)
     $.ajax({
       type: "GET",
       url: this.href,
       dataType: "JSON"
     }).done(function(response){
-      console.log(this)
       let $ol = $("div.visits ol")
       $ol.html("")
       response.forEach(function(visit){
@@ -29,9 +24,7 @@ $(function(){
       })
     })
   })
-})
 
-$(function(){
   $(".new_course").on("submit", function(event) {
     event.preventDefault();
     $.ajax({
