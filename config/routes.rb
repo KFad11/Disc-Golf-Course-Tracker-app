@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :disc_golfers
   resources :courses do
     resources :baskets
+      get 'longest_par', to: 'baskets#longest_par', as: :longest_par
     resources :visits
   end
 
