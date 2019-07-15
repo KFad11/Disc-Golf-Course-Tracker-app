@@ -23,6 +23,10 @@ class BasketsController < ApplicationController
     redirect_to course_path(@course)
   end
 
+  def show
+    binding.pry
+  end
+
 private
 
   def basket_params
