@@ -1,6 +1,13 @@
 $(function(){
   $(".long_shot").on("click", function(event){
     event.preventDefault();
+    // Need to have the button look to the baskets form
+
+    // iterate through all the available baskets
+
+    // Capture the basket with the highest par, or if there's multiple with the same, chose the first highest basket with the highest par.
+
+    // The click of the button would display that basket.
   })
 })
 
