@@ -29,10 +29,8 @@ class BasketsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to courses_path }
       format.json do
-        render json: {
-          course_id: @course.id,
-          longest_par: longest_par,
-        }.to_json
+        render json: { course_id: @course.id,
+                       longest_par: longest_par }.to_json
       end
     end
   end
