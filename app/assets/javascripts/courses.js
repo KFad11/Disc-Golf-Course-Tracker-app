@@ -6,9 +6,10 @@ $(function(){
       url: this.href,
       dataType: "JSON"
     }).done(function(response){
-      const longPar = new Basket(response.longest_par)
-      console.log(longPar.longest_par)
-      $("div#course_").append(longPar.basketEl())
+      const longPar = new Basket(response.course_id, response.longest_par)
+      const $list = $(`#course_${response.course_id}`)
+      $list.html("")
+      $list.append(longPar.basketEl())
     })
   })
 
