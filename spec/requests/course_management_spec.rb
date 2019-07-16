@@ -7,10 +7,12 @@ RSpec.describe "Course management", :type => :request do
     sign_in disc_golfer
     get "/courses"
     expect(response).to render_template(:index)
-  end
 
-  it "does not render a different template" do
-    get "/courses/new"
-    expect(response).to_not render_template(:show)
+    post "/courses.json", :params => { :course => {:name => "Northwood Longs", :location => "Peoria, IL"} }
+
+    body = JSON.parse(response.body)
+    course = Course.last
+    expect(body["id"]).to eq course.id
+    expect(body["name"]).to eq course.name
   end
 end
