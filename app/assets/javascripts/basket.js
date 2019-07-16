@@ -1,7 +1,8 @@
 'use strict'
 
 class Basket {
-  constructor(longest_par) {
+  constructor(course_id, longest_par) {
+    this.course_id = course_id
     this.longest_par = longest_par
   }
 
