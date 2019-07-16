@@ -7,7 +7,7 @@
       <br>
       <%= link_to '<button type="button">Longest Par on the course</button>'.html_safe, course_longest_par_path(course), :class => "long_par" %>
       <br>
-      <div id="course_">
+      <div id="course_<%= course.id %>">
       </div>
     </li>
     <br>
