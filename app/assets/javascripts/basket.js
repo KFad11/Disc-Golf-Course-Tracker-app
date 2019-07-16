@@ -1,13 +1,13 @@
 'use strict'
 
 class Basket {
-  constructor(par) {
-    this.par = par
+  constructor(longest_par) {
+    this.longest_par = longest_par
   }
 
   basketEl() {
     return `
-        Par: ${this.par}
+        Par: ${this.longest_par}
       <br>
     `
   }
