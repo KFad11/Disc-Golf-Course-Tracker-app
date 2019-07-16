@@ -14,7 +14,6 @@ class Course {
         <br>
         Location: ${this.location}
       </li>
-      <br>
     `
   }
 }
