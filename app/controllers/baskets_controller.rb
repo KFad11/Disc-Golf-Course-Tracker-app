@@ -25,11 +25,15 @@ class BasketsController < ApplicationController
 
   def longest_par
     @course = Course.find(params[:course_id])
-    @course.baskets.maximum(:par)
-
+    longest_par = @course.baskets.maximum(:par)
     respond_to do |format|
       format.html { redirect_to courses_path }
-      format.json { render json: @course.baskets.to_json, status: :created }
+      format.json do
+        render json: {
+          course_id: @course.id,
+          longest_par: longest_par,
+        }.to_json
+      end
     end
   end
 
