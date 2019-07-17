@@ -38,12 +38,10 @@ $(function(){
       dataType: "JSON"
     }).done(function(response) {
       const link = `${this.url}/${response.id}`
-      const newCourse = new Course(response.name, response.location, link)
+      const newCourse = new Course(response.name, response.location, link, response.id)
       const $courseList = $("#disc_golf_courses")
       $courseList.append(newCourse.courseEl())
-      // reactive button
-      // How?
-      // google for jQuery or vanilla JS ways to do it. It's likely one line of code.
+      $('#course_submit').removeAttr('disabled');
     })
   })
 })
