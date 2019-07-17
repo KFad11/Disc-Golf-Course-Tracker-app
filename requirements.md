@@ -2,54 +2,32 @@ Add notes below each checkbox with how your application has met the requirement
 
 Requirements:
 
-[X] Uses Ruby on Rails
+Specs:
 
-[X] Includes at least one has_many relationship (e.g. User has_many Recipes)
-  - Course has_many baskets
+ [X] Uses jQuery for implementing new requirements
 
-[X] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
-  - Baskets belong_to a Course
+ [X] Includes a single resource rendered using jQuery, a JSON backend and OO JS.
 
-[X] Includes at least one has_many through relationship (e.g. Recipe has_many Items through Ingredients)
-  - Disc_Golfer has_many Courses through Visits
+ [X] Includes a list of resources rendered using jQuery, a JSON backend and OO JS.
 
-[X] The "through" part of the has_many through includes at least one user submittable attribute (e.g. ingredient#quantity)
-  - Visits has a day_visited attribute to log when you visited the course. On the new visit page/schema.
+ [X] Intercepts a form to create a resource and then renders the response to the DOM without a page refresh.
 
-[X] Includes reasonable validations for simple model objects
-  [X] - protecting against basket number uniqueness on each individual course.
-  [X] - How to display rails errors in controller actions.
+ [] Includes at least one has_many relationship in information rendered via JSON and appended to the DOM (likely included as part of one of the above criteria).
 
-[X] Includes a class level ActiveRecord scope method
-  on the basket display to order the baskets by number.
+ [X] Translates all JSON responses into JS model objects.
 
-[X] Includes signup (e.g. Devise)
+ [X] Contains at least 4 model specs, 2 request specs and one system test that reasonably tests your public api.
 
-[X] Includes login (e.g. Devise)
+Confirm
 
-[X] Includes logout (e.g. Devise)
+ [X] You have a large number of small Git commits
 
-[X] Includes nested resource show or index (e.g. users/2/recipes)
-  - Visits index page, showing each of you visits, when and which course.
+ [X] Your commit messages are meaningful
 
-[X] Includes nested resource "new" form (recipes/1/ingredients/new)
-  - Create a new visit to a course.
+ [] You made the changes in a commit that relate to the commit message
 
-[X] Includes form display of validation errors
-  - Devises' login validations, also a course throws errors if you leave out the name and/or location. The new basket fields require uniqueness of basket #.
+ [] You don't include changes in a commit that aren't related to the commit message
 
-[X] Includes Unit tests for at least 2 of your models
+ [] Makes use of ES6 features as much as possible (e.g Arrow functions, Let & Const, Class, constructor functions)
 
-[X] Conforms to Nitro Ruby linting rules (running rubocop returns 0 offenses)
-
-[X] Includes a README.md with an application description and installation guide.
-
-Confirm:
-
-[X] The application is pretty DRY
-[X] Limited logic in controllers
-[X] Views use helper methods if appropriate
-[X] Views use partials if appropriate
-
-If you've added any additional functionality to your application that you'd like to demonstrate, please describe it below:
-
+ [] Application is pretty DRY.
