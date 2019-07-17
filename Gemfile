@@ -72,6 +72,7 @@ group :test do
   # Test pages during test writing
   gem "launchy"
   gem "rails-controller-testing"
+  gem "simplecov", require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
