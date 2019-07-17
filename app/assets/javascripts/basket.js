@@ -7,9 +7,15 @@ class Basket {
   }
 
   basketEl() {
-    return `
-        Par: ${this.longest_par}
-      <br>
-    `
+    if (this.longest_par) {
+      return `
+          Par: ${this.longest_par}
+        <br>
+      `
+    } else {
+      return(`
+        No Baskets exist for the course yet.
+      `)
+    }
   }
 }
